@@ -8,7 +8,7 @@ using System.Text;
 
 namespace DataAccess.Concrete
 {
-    public class UserDal : EfEntityRepositoryBase<User,UserContext>
+    public class UserDal : EfEntityRepositoryBase<User,UserContext>,IUserDal
     {
     }
 }

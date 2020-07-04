@@ -23,22 +23,22 @@ namespace Business.Concrete
 
         public List<User> GetAllCallCenterUser()
         {
-            return userDal.GetAll(x => x.RoleId == 4);
+            return userDal.GetAll(x => x.RoleId == 4).ToList();
         }
 
         public List<User> GetAllDealerUser()
         {
-            return userDal.GetAll(x => x.RoleId == 1);
+            return userDal.GetAll(x => x.RoleId == 1).ToList();
         }
 
         public User GetUserByDealerId(int dealerId)
         {
-            throw new NotImplementedException();
+            return userDal.GetUser(x=>x.DealerId == dealerId);
         }
 
         public User GetUserById(int userId)
         {
-            throw new NotImplementedException();
+            return userDal.GetUser(x => x.Id == userId);
         }
 
         public User LoginCallCenter(int userId, string password)
@@ -80,7 +80,7 @@ namespace Business.Concrete
 
         public void UpdateUser(User user)
         {
-            throw new NotImplementedException();
+            userDal.UpdateUser(user);
         }
     }
 }
