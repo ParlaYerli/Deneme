@@ -10,6 +10,7 @@ using DataAccess.Concrete.Context;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -38,6 +39,8 @@ namespace WebUI
                    options.AccessDeniedPath = "/Home/AuthFailed";
                    options.LoginPath = "/bayi";
                });
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+
             services.AddDbContext<UserContext>();
             services.AddControllersWithViews();
             services.AddScoped<IUserDal, UserDal>();

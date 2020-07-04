@@ -1,0 +1,51 @@
+﻿
+@{
+    ViewData["Title"] = "Search";
+}
+
+<div class="row">
+    <div class="col-md-2 pl-lg-5  pb-xl-3 text-center pt-2 pr-0 ">
+        <p>Bir bayi ID giriniz:</p>
+    </div>
+
+    <div class="col-md-8 pl-0">
+        <input class="form-control " type="text" id="searchtxt" placeholder="Bayi ID giriniz." aria-label="Arama Yapınız.">
+    </div>
+    <div class="col-md-2">
+        <button type="button" onclick="searchBtn()" class="btn btn-primary ">Arama Yap</button>
+    </div>
+
+</div>
+<div id="loadingbar" style="display: none;">
+    <div class="d-flex justify-content-center">
+        <div class="spinner-border" role="status">
+            <span class="sr-only">Aranıyor...</span>
+        </div>
+    </div>
+</div>
+<hr style="border-color: black">
+<div id="result">
+
+</div>
+<script>function searchBtn() {
+
+        if ($.trim($('#searchtxt').val()) == '') {
+            alert('Lütfen Bayi ID giriniz');
+            return;
+        }
+        $('#loadingbar').show();
+        var dealerId = $('#searchtxt').val();
+        var str = '<a href="/CallCenter/DealerInfo?dealerid=rtnVal">rtnVal</a>';
+
+        $.post("/CallCenter/SearchByDealerId", { dealerId: dealerId })
+            .done(function (data) {
+                if (data === null) {
+                    $("#result").html('Girdiğiniz Bayi ID ile uyuşan Bayi bulunamamıştır');
+                } else {
+                    var link = str.replace('rtnVal', data).replace('rtnVal', data);
+                    $("#result").html(link);
+                }
+                $('#loadingbar').hide();
+            });
+    }</script>
+
