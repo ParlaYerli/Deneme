@@ -33,10 +33,10 @@ namespace WebUI.Controllers
             {
                 CallCenterUserViewModel model = new CallCenterUserViewModel()
                 {
-                     Id =item.Id,
-                    CreatedDate=item.CreatedDate,
+                    Id = item.Id,
+                    CreatedDate = item.CreatedDate,
                     FullName = item.FullName,
-                    IsActive=item.IsActive
+                    IsActive = item.IsActive
                 };
                 modelList.Add(model);
             }
@@ -46,7 +46,7 @@ namespace WebUI.Controllers
         public async Task<bool> LoginUserAsync(LoginViewModel model)
         {
             var user = _authService.LoginCallCenter(model.DealerId, model.Password);
-            if (user!=null)
+            if (user != null)
             {
                 var claims = new List<Claim>();
                 if (user.RoleId == 2)
@@ -67,11 +67,11 @@ namespace WebUI.Controllers
                 ClaimsPrincipal principal = new ClaimsPrincipal(userIdentity);
 
                 await HttpContext.SignInAsync(principal);
-                _loggingService.Log("CallCenter Login işlemi", Entities.Abstract.LogType.Login,user.Id);
+                _loggingService.Log("CallCenter Login işlemi", Entities.Abstract.LogType.Login, user.Id);
                 return true;
             }
             return false;
-        } 
+        }
 
         public async Task<IActionResult> Login(LoginViewModel model)
         {
@@ -99,7 +99,7 @@ namespace WebUI.Controllers
 
         public IActionResult CreateCallCenterUser(CallCenterUserViewModel model)
         {
-            if (model.FullName == null || model.Password==null)
+            if (model.FullName == null || model.Password == null)
             {
                 return View();
             }
@@ -114,7 +114,7 @@ namespace WebUI.Controllers
                 CreatedBy = 2
             };
             _authService.CreateCallCenter(user);
-            return RedirectToAction("ListCallCenterUser","CallCenter");
+            return RedirectToAction("ListCallCenterUser", "CallCenter");
         }
         public IActionResult Search()
         {
@@ -127,5 +127,24 @@ namespace WebUI.Controllers
             return Json(user?.DealerId);
         }
 
+        public IActionResult DealerInfo(int dealerId)
+        {
+            User user = new User();
+            user = _authService.GetUserByDealerId(dealerId);
+            return View(user);
+        }
+
+        public IActionResult UpdatePhone(int dealerId, string phone)
+        {
+            var user = _authService.GetUserByDealerId(dealerId);
+            string oldPhone = user.Phone;
+            user.Phone = phone;
+
+            _authService.UpdateUser(user);
+            var id = Convert.ToInt32(HttpContext.User.FindFirstValue(ClaimTypes.PrimarySid));
+            _loggingService.Log(dealerId.ToString() + $" ID li bayinin telefon numarası {oldPhone} -> {phone} güncellenmiştir.", Entities.Abstract.LogType.ChangePhone, id);
+            return Ok();
+        }
     }
 }
+    

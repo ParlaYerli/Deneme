@@ -1,0 +1,140 @@
+﻿@model Entities.Concrete.User
+<div class="row">
+    <div class="control-label col-md-2 pl-lg-5  pb-xl-3 text-center pt-2 pr-0 ">
+        <p>Bayi Bilgileri :</p>
+    </div>
+
+    <div class="control-label col-md-2 pl-lg-5  pb-xl-3 text-center pt-2 pr-0 ">
+        <p id="dealerid">@Model.DealerId</p>
+    </div>
+
+</div>
+<hr style="border-color: black">
+<div id="result">
+    <div class="row">
+        <div class="control-label col-md-2 pl-lg-5  pb-xl-3 text-center pt-2 pr-0 ">
+            <p>Dealer Id: </p>
+        </div>
+        <div class="control-label col-md-5 pl-lg-5  pb-xl-3 text-center pt-2 pr-0 ">
+            <p>@Model.DealerId</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="control-label col-md-2 pl-lg-5  pb-xl-3 text-center pt-2 pr-0 ">
+            <p>Dealer Name: </p>
+        </div>
+        <div class="control-label col-md-5 pl-lg-5  pb-xl-3 text-center pt-2 pr-0 ">
+            <p>@Model.DealerName</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="control-label col-md-2 pl-lg-5  pb-xl-3 text-center pt-2 pr-0 ">
+            <p>Dealer FullName: </p>
+        </div>
+        <div class="control-label col-md-5 pl-lg-5  pb-xl-3 text-center pt-2 pr-0 ">
+            <p>@Model.FullName</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="control-label col-md-2 pl-lg-5  pb-xl-3 text-center pt-2 pr-0 ">
+            <p>Dealer Adres: </p>
+        </div>
+        <div class="control-label col-md-5 pl-lg-5  pb-xl-3 text-center pt-2 pr-0 ">
+            <p>@Model.Address</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="control-label col-md-2 pl-lg-5  pb-xl-3 text-center pt-2 pr-0 ">
+            <p>Dealer City: </p>
+        </div>
+        <div class="control-label col-md-5 pl-lg-5  pb-xl-3 text-center pt-2 pr-0 ">
+            <p>@Model.City</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="control-label col-md-2 pl-lg-5  pb-xl-3 text-center pt-2 pr-0 ">
+            <p>Dealer Phone: </p>
+        </div>
+        <div class="control-label col-md-5 pl-lg-5  pb-xl-3 text-center pt-2 pr-0 ">
+            <p>@Model.Phone</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="control-label col-md-2 pl-lg-5  pb-xl-3 text-center pt-2 pr-0 ">
+            <p>Dealer Activated: </p>
+        </div>
+        <div class="control-label col-md-5 pl-lg-5  pb-xl-3 text-center pt-2 pr-0 ">
+            <p>@Model.IsActive</p>
+        </div>
+    </div>
+</div>
+<div class="row justify-content-end">
+    <div class="col-md-2 pl-5 pr-0">
+        <button type="button" class="btn btn-primary" data-toggle="modal" tabindex="-1" data-target="#myModal">GSM Güncelle</button>
+    </div>
+</div>
+<div class="modal" id="myModal">
+    <div class="modal-dialog position-static">
+        <div class="modal-content">
+            <div class="modal-header"> <h4>GSM Güncelle</h4></div>
+            <div class="modal-body">
+                <form class="form-horizontal" role="form">
+                    <div class="form-group ">
+                        <label class="control-label col-md-4 pt-1 " for="inputEmail3">Yeni GSM No:</label>
+                        <input type="tel" class="col-md-6 pr-0" name="phone" id="changedphone" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" @*required maxlength="10"*@ />
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal" id="myBtn"> Kapat</button>
+                <button type="button" data-dismiss="modal" class="btn btn-primary" onclick="changePhone()">Güncelle</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div style="position: fixed; bottom: 60px; right: 0;">
+    <div class="toast" id="myToast" role="alert" aria-live="assertive" aria-atomic="true" data-delay="4000" style="min-width:400px">
+        <div class="toast-header" style="background-color:#51a351">
+            <p class="mr-auto" style="font-size:14px; color:white" id="myToastText"><p />
+            <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+
+    </div>
+</div>
+<div style="position: fixed; bottom: 60px; right: 0;">
+    <div class="toast" id="myToast" role="alert" aria-live="assertive" aria-atomic="true" data-delay="4000" style="min-width:400px">
+        <div class="toast-header" style="background-color:#51a351">
+            <p class="mr-auto" style="font-size:14px; color:white" id="myToastText"><p />
+            <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+
+    </div>
+</div>
+<script>
+    function changePhone() {
+
+        var phone = $('#changedphone').val();
+
+        if (phone === '' || phone.length !== 10) {
+            alert('Lütfen Geçerli Bir Telefon Numarası Giriniz örn:(5552223322)');
+            return;
+        }
+
+        var dealerid = $('#dealerid').html();
+
+        $.post("/CallCenter/UpdatePhone", { dealerId: dealerid, phone: phone })
+            .done(function (data) {
+                $('#phone').html(phone);
+                $('#myToastText').html('Telefon Numarası Değiştirildi.');
+                $('#myToast').toast('show');
+            });
+
+    }
+</script>
+
+
