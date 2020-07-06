@@ -34,7 +34,7 @@ namespace DataAccess.Concrete.Context
             modelBuilder.Entity<Role>().HasData(
                 new Role() { Id = 1, Name = "Dealer", CreatedDate = DateTime.Now, CreatedBy = 2 },
                 new Role() { Id = 2, Name = "CallCenterAdmin", CreatedDate = DateTime.Now, CreatedBy = 2 },
-                 new Role() { Id = 3, Name = "SporToto", CreatedDate = DateTime.Now, CreatedBy = 2 },
+                 new Role() { Id = 3, Name = "Dealer2", CreatedDate = DateTime.Now, CreatedBy = 2 },
                  new Role() { Id = 4, Name = "CallCenter", CreatedDate = DateTime.Now, CreatedBy = 2 }
                 );
 
@@ -51,7 +51,7 @@ namespace DataAccess.Concrete.Context
                    CreatedDate = DateTime.Now,
                    UpdatedBy = 1,
                    FullName = "Test",
-                   DealerName = "iddaa Bayisi",
+                   DealerName = "Bayi1",
                    Address = "Test mah. Test sokak.",
                    City = "İstanbul",
                    Phone = "5552223355"
@@ -66,7 +66,7 @@ namespace DataAccess.Concrete.Context
                    UpdatedDate = DateTime.Now,
                    CreatedDate = DateTime.Now,
                    UpdatedBy = 1,
-                   FullName = "Çağrı Merkezi Admin"
+                   FullName = "CallCenter Admin"
                },
               new User()
               {
@@ -79,8 +79,8 @@ namespace DataAccess.Concrete.Context
                   UpdatedDate = DateTime.Now,
                   CreatedDate = DateTime.Now,
                   UpdatedBy = 1,
-                  FullName = "SporToto",
-                  DealerName = "SporToto Ekranı",
+                  FullName = "Dealer",
+                  DealerName = "Dealer ekranı",
                   Address = "Test mah. Test sokak.",
                   City = "İstanbul",
                   Phone = "5552223355"
@@ -106,25 +106,11 @@ namespace DataAccess.Concrete.Context
                     Id = 3,
                     CreatedBy = 1,
                     CreatedDate = DateTime.Now,
-                    Name = "SendSMS"
-                },
-                new LogType()
-                {
-                    Id = 4,
-                    CreatedBy = 1,
-                    CreatedDate = DateTime.Now,
-                    Name = "DownloadPdf"
-                },
-                new LogType()
-                {
-                    Id = 5,
-                    CreatedBy = 1,
-                    CreatedDate = DateTime.Now,
                     Name = "ChangePhone"
                 },
                 new LogType()
                 {
-                    Id = 6,
+                    Id = 4,
                     CreatedBy = 1,
                     CreatedDate = DateTime.Now,
                     Name = "Error"
@@ -132,3 +118,8 @@ namespace DataAccess.Concrete.Context
         }
     }
 }
+
+
+
+//4 -123123 callcenter login
+//123123 -123123 dealer login

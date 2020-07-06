@@ -49,7 +49,7 @@ namespace Business.Concrete
 
         public User LoginDealer(int dealerId, string password)
         {
-            return userDal.Login(x => x.IsActive && x.DealerId == dealerId && x.Password == PasswordHasher(password) && (x.RoleId == 1 || x.RoleId == 3)); // Dealer & SporToto
+            return userDal.Login(x => x.IsActive && x.DealerId == dealerId && x.Password == PasswordHasher(password) && (x.RoleId == 1 || x.RoleId == 3)); // Dealer & Bayi
         }
         string serverKey = "demiroren";
         public string PasswordHasher(string rawData)

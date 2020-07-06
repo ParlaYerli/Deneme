@@ -66,7 +66,7 @@ namespace WebUI.Controllers
                 {
 
                     claims.Add(new Claim(ClaimTypes.Name, user.DealerName.ToString()));
-                    claims.Add(new Claim(ClaimTypes.Role, "SporToto"));
+                    claims.Add(new Claim(ClaimTypes.Role, "Bayi1"));
                     claims.Add(new Claim(ClaimTypes.PrimarySid, user.Id.ToString()));
                     claims.Add(new Claim(ClaimTypes.PrimaryGroupSid, user.DealerId.ToString()));
                 }
@@ -77,7 +77,7 @@ namespace WebUI.Controllers
 
                 await HttpContext.SignInAsync(principal);
 
-                _loggingService.Log("Dealer veya SporToto Login işlemi", Entities.Abstract.LogType.Login, user.Id);
+                _loggingService.Log("Dealer veya Bayi Login işlemi", Entities.Abstract.LogType.Login, user.Id);
                 return true;
             }
 

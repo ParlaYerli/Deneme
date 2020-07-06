@@ -104,7 +104,7 @@ namespace DataAccess.Migrations
                 {
                     { 1, 2, new DateTime(2020, 7, 4, 17, 35, 4, 50, DateTimeKind.Local).AddTicks(3234), "Dealer" },
                     { 2, 2, new DateTime(2020, 7, 4, 17, 35, 4, 54, DateTimeKind.Local).AddTicks(7126), "CallCenterAdmin" },
-                    { 3, 2, new DateTime(2020, 7, 4, 17, 35, 4, 54, DateTimeKind.Local).AddTicks(7179), "SporToto" },
+                    { 3, 2, new DateTime(2020, 7, 4, 17, 35, 4, 54, DateTimeKind.Local).AddTicks(7179), "Bayi" },
                     { 4, 2, new DateTime(2020, 7, 4, 17, 35, 4, 54, DateTimeKind.Local).AddTicks(7181), "CallCenter" }
                 });
 
@@ -115,7 +115,7 @@ namespace DataAccess.Migrations
                 {
                     { 1, "Test mah. Test sokak.", "İstanbul", 1, new DateTime(2020, 7, 4, 17, 35, 4, 56, DateTimeKind.Local).AddTicks(6363), 123123, "iddaa Bayisi", null, "Test", true, "023a2d11e01237fb6eab5ca926facd39ee44b1683e84295cccef79b7df905195", "5552223355", 1, 1, new DateTime(2020, 7, 4, 17, 35, 4, 56, DateTimeKind.Local).AddTicks(5732) },
                     { 2, null, null, 1, new DateTime(2020, 7, 4, 17, 35, 4, 56, DateTimeKind.Local).AddTicks(9742), null, null, null, "Çağrı Merkezi Admin", true, "023a2d11e01237fb6eab5ca926facd39ee44b1683e84295cccef79b7df905195", null, 2, 1, new DateTime(2020, 7, 4, 17, 35, 4, 56, DateTimeKind.Local).AddTicks(9725) },
-                    { 3, "Test mah. Test sokak.", "İstanbul", 1, new DateTime(2020, 7, 4, 17, 35, 4, 56, DateTimeKind.Local).AddTicks(9784), 3, "SporToto Ekranı", null, "SporToto", true, "023a2d11e01237fb6eab5ca926facd39ee44b1683e84295cccef79b7df905195", "5552223355", 3, 1, new DateTime(2020, 7, 4, 17, 35, 4, 56, DateTimeKind.Local).AddTicks(9782) }
+                    { 3, "Test mah. Test sokak.", "İstanbul", 1, new DateTime(2020, 7, 4, 17, 35, 4, 56, DateTimeKind.Local).AddTicks(9784), 3, "Bayi Ekranı", null, "Bayi", true, "023a2d11e01237fb6eab5ca926facd39ee44b1683e84295cccef79b7df905195", "5552223355", 3, 1, new DateTime(2020, 7, 4, 17, 35, 4, 56, DateTimeKind.Local).AddTicks(9782) }
                 });
         }
 
