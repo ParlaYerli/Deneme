@@ -145,7 +145,16 @@ namespace WebUI.Controllers
             _loggingService.Log(dealerId.ToString() + $" ID li bayinin telefon numarası {oldPhone} -> {phone} güncellenmiştir.", Entities.Abstract.LogType.ChangePhone, id);
             return Ok();
         }
+        public IActionResult ToggleStatus(int userId)
+        {
+            var user = _authService.GetUserById(userId);
 
+            user.IsActive = !user.IsActive;
+
+            _authService.UpdateUser(user);
+
+            return Ok();
+        }
         public IActionResult ChangeCallCenterPassword(int userId,string pass)
         {
             var user = _authService.GetUserById(userId);
@@ -158,6 +167,8 @@ namespace WebUI.Controllers
         {
             return Json(_authService.RandomPassword(6));
         }
+
+
     }
 }
     

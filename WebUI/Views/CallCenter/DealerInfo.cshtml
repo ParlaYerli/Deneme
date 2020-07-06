@@ -76,12 +76,6 @@
 
 <input type="hidden" value="" id="userid" />
 <script>
-    function updateStatus(userid) {
-        $.post("/CallCenter/ToggleStatus", { userId: userid })
-            .done(function (data) {
-                window.location.href = '/CallCenter/ListCallCenterUser';
-            });
-    }
 
     function newPass() {
         $.get("/CallCenter/GeneratePassword")
