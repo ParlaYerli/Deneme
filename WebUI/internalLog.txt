@@ -397,3 +397,122 @@
 2020-07-06 14:57:08.9344 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=C:\Users\parla.yerli\source\repos\Deneme\WebUI\bin\Debug\netcoreapp3.1\NLog.config
 2020-07-06 14:57:08.9917 Info Configuration initialized.
 2020-07-06 14:57:09.0051 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.2.11786. Product version: 4.7.2+024896f64b840a743d3fd89e29c2186681e7795f. GlobalAssemblyCache: False
+2020-07-06 15:17:08.3263 Info Message Template Auto Format enabled
+2020-07-06 15:17:08.3595 Info Loading assembly: NLog.Web.AspNetCore
+2020-07-06 15:17:08.4685 Info Adding target FileTarget(Name=alldata)
+2020-07-06 15:17:08.4821 Info Adding target FileTarget(Name=otherFile-web)
+2020-07-06 15:17:08.5395 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=C:\Users\parla.yerli\source\repos\Deneme\WebUI\bin\Debug\netcoreapp3.1\NLog.config
+2020-07-06 15:17:08.5844 Info Configuration initialized.
+2020-07-06 15:17:08.5978 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.2.11786. Product version: 4.7.2+024896f64b840a743d3fd89e29c2186681e7795f. GlobalAssemblyCache: False
+2020-07-06 15:20:11.6071 Info Message Template Auto Format enabled
+2020-07-06 15:20:11.6440 Info Loading assembly: NLog.Web.AspNetCore
+2020-07-06 15:20:11.7586 Info Adding target FileTarget(Name=alldata)
+2020-07-06 15:20:11.7734 Info Adding target FileTarget(Name=otherFile-web)
+2020-07-06 15:20:11.8414 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=C:\Users\parla.yerli\source\repos\Deneme\WebUI\bin\Debug\netcoreapp3.1\NLog.config
+2020-07-06 15:20:11.8848 Info Configuration initialized.
+2020-07-06 15:20:11.8973 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.2.11786. Product version: 4.7.2+024896f64b840a743d3fd89e29c2186681e7795f. GlobalAssemblyCache: False
+2020-07-06 15:22:36.1802 Info Message Template Auto Format enabled
+2020-07-06 15:22:36.2134 Info Loading assembly: NLog.Web.AspNetCore
+2020-07-06 15:22:36.3197 Info Adding target FileTarget(Name=alldata)
+2020-07-06 15:22:36.3377 Info Adding target FileTarget(Name=otherFile-web)
+2020-07-06 15:22:36.4162 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=C:\Users\parla.yerli\source\repos\Deneme\WebUI\bin\Debug\netcoreapp3.1\NLog.config
+2020-07-06 15:22:36.4684 Info Configuration initialized.
+2020-07-06 15:22:36.4684 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.2.11786. Product version: 4.7.2+024896f64b840a743d3fd89e29c2186681e7795f. GlobalAssemblyCache: False
+2020-07-06 15:23:23.7957 Info Message Template Auto Format enabled
+2020-07-06 15:23:23.8300 Info Loading assembly: NLog.Web.AspNetCore
+2020-07-06 15:23:23.9338 Info Adding target FileTarget(Name=alldata)
+2020-07-06 15:23:23.9476 Info Adding target FileTarget(Name=otherFile-web)
+2020-07-06 15:23:24.0096 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=C:\Users\parla.yerli\source\repos\Deneme\WebUI\bin\Debug\netcoreapp3.1\NLog.config
+2020-07-06 15:23:24.0858 Info Configuration initialized.
+2020-07-06 15:23:24.0993 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.2.11786. Product version: 4.7.2+024896f64b840a743d3fd89e29c2186681e7795f. GlobalAssemblyCache: False
+2020-07-06 15:25:20.7503 Info Message Template Auto Format enabled
+2020-07-06 15:25:20.7814 Info Loading assembly: NLog.Web.AspNetCore
+2020-07-06 15:25:20.8844 Info Adding target FileTarget(Name=alldata)
+2020-07-06 15:25:20.9022 Info Adding target FileTarget(Name=otherFile-web)
+2020-07-06 15:25:20.9841 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=C:\Users\parla.yerli\source\repos\Deneme\WebUI\bin\Debug\netcoreapp3.1\NLog.config
+2020-07-06 15:25:21.0460 Info Configuration initialized.
+2020-07-06 15:25:21.0618 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.2.11786. Product version: 4.7.2+024896f64b840a743d3fd89e29c2186681e7795f. GlobalAssemblyCache: False
+2020-07-06 15:26:13.2751 Info Message Template Auto Format enabled
+2020-07-06 15:26:13.3029 Info Loading assembly: NLog.Web.AspNetCore
+2020-07-06 15:26:13.4467 Info Adding target FileTarget(Name=alldata)
+2020-07-06 15:26:13.4609 Info Adding target FileTarget(Name=otherFile-web)
+2020-07-06 15:26:13.5263 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=C:\Users\parla.yerli\source\repos\Deneme\WebUI\bin\Debug\netcoreapp3.1\NLog.config
+2020-07-06 15:26:13.5784 Info Configuration initialized.
+2020-07-06 15:26:13.5908 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.2.11786. Product version: 4.7.2+024896f64b840a743d3fd89e29c2186681e7795f. GlobalAssemblyCache: False
+2020-07-06 15:33:37.5178 Info Message Template Auto Format enabled
+2020-07-06 15:33:37.5589 Info Loading assembly: NLog.Web.AspNetCore
+2020-07-06 15:33:37.7359 Info Adding target FileTarget(Name=alldata)
+2020-07-06 15:33:37.7636 Info Adding target FileTarget(Name=otherFile-web)
+2020-07-06 15:33:37.8849 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=C:\Users\parla.yerli\source\repos\Deneme\WebUI\bin\Debug\netcoreapp3.1\NLog.config
+2020-07-06 15:33:37.9412 Info Configuration initialized.
+2020-07-06 15:33:37.9557 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.2.11786. Product version: 4.7.2+024896f64b840a743d3fd89e29c2186681e7795f. GlobalAssemblyCache: False
+2020-07-06 15:43:49.5667 Info Message Template Auto Format enabled
+2020-07-06 15:43:49.6047 Info Loading assembly: NLog.Web.AspNetCore
+2020-07-06 15:43:49.7719 Info Adding target FileTarget(Name=alldata)
+2020-07-06 15:43:49.7936 Info Adding target FileTarget(Name=otherFile-web)
+2020-07-06 15:43:49.8911 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=C:\Users\parla.yerli\source\repos\Deneme\WebUI\bin\Debug\netcoreapp3.1\NLog.config
+2020-07-06 15:43:49.9504 Info Configuration initialized.
+2020-07-06 15:43:49.9504 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.2.11786. Product version: 4.7.2+024896f64b840a743d3fd89e29c2186681e7795f. GlobalAssemblyCache: False
+2020-07-06 15:45:09.5704 Info Message Template Auto Format enabled
+2020-07-06 15:45:09.6114 Info Loading assembly: NLog.Web.AspNetCore
+2020-07-06 15:45:09.7515 Info Adding target FileTarget(Name=alldata)
+2020-07-06 15:45:09.7656 Info Adding target FileTarget(Name=otherFile-web)
+2020-07-06 15:45:09.8344 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=C:\Users\parla.yerli\source\repos\Deneme\WebUI\bin\Debug\netcoreapp3.1\NLog.config
+2020-07-06 15:45:09.8823 Info Configuration initialized.
+2020-07-06 15:45:09.8949 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.2.11786. Product version: 4.7.2+024896f64b840a743d3fd89e29c2186681e7795f. GlobalAssemblyCache: False
+2020-07-06 15:48:12.0034 Info Message Template Auto Format enabled
+2020-07-06 15:48:12.0425 Info Loading assembly: NLog.Web.AspNetCore
+2020-07-06 15:48:12.2454 Info Adding target FileTarget(Name=alldata)
+2020-07-06 15:48:12.2681 Info Adding target FileTarget(Name=otherFile-web)
+2020-07-06 15:48:12.3675 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=C:\Users\parla.yerli\source\repos\Deneme\WebUI\bin\Debug\netcoreapp3.1\NLog.config
+2020-07-06 15:48:12.4219 Info Configuration initialized.
+2020-07-06 15:48:12.4352 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.2.11786. Product version: 4.7.2+024896f64b840a743d3fd89e29c2186681e7795f. GlobalAssemblyCache: False
+2020-07-06 15:51:41.3820 Info Message Template Auto Format enabled
+2020-07-06 15:51:41.4143 Info Loading assembly: NLog.Web.AspNetCore
+2020-07-06 15:51:41.5312 Info Adding target FileTarget(Name=alldata)
+2020-07-06 15:51:41.5483 Info Adding target FileTarget(Name=otherFile-web)
+2020-07-06 15:51:41.6213 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=C:\Users\parla.yerli\source\repos\Deneme\WebUI\bin\Debug\netcoreapp3.1\NLog.config
+2020-07-06 15:51:41.6695 Info Configuration initialized.
+2020-07-06 15:51:41.6695 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.2.11786. Product version: 4.7.2+024896f64b840a743d3fd89e29c2186681e7795f. GlobalAssemblyCache: False
+2020-07-06 15:55:09.7111 Info Message Template Auto Format enabled
+2020-07-06 15:55:09.7504 Info Loading assembly: NLog.Web.AspNetCore
+2020-07-06 15:55:09.9308 Info Adding target FileTarget(Name=alldata)
+2020-07-06 15:55:09.9535 Info Adding target FileTarget(Name=otherFile-web)
+2020-07-06 15:55:10.0410 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=C:\Users\parla.yerli\source\repos\Deneme\WebUI\bin\Debug\netcoreapp3.1\NLog.config
+2020-07-06 15:55:10.0956 Info Configuration initialized.
+2020-07-06 15:55:10.1137 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.2.11786. Product version: 4.7.2+024896f64b840a743d3fd89e29c2186681e7795f. GlobalAssemblyCache: False
+2020-07-06 16:00:55.3275 Info Message Template Auto Format enabled
+2020-07-06 16:00:55.3693 Info Loading assembly: NLog.Web.AspNetCore
+2020-07-06 16:00:55.5654 Info Adding target FileTarget(Name=alldata)
+2020-07-06 16:00:55.5847 Info Adding target FileTarget(Name=otherFile-web)
+2020-07-06 16:00:55.6770 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=C:\Users\parla.yerli\source\repos\Deneme\WebUI\bin\Debug\netcoreapp3.1\NLog.config
+2020-07-06 16:00:55.7431 Info Configuration initialized.
+2020-07-06 16:00:55.7574 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.2.11786. Product version: 4.7.2+024896f64b840a743d3fd89e29c2186681e7795f. GlobalAssemblyCache: False
+2020-07-06 16:01:47.9133 Info Message Template Auto Format enabled
+2020-07-06 16:01:47.9411 Info Loading assembly: NLog.Web.AspNetCore
+2020-07-06 16:01:48.0601 Info Adding target FileTarget(Name=alldata)
+2020-07-06 16:01:48.0751 Info Adding target FileTarget(Name=otherFile-web)
+2020-07-06 16:01:48.1394 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=C:\Users\parla.yerli\source\repos\Deneme\WebUI\bin\Debug\netcoreapp3.1\NLog.config
+2020-07-06 16:01:48.1852 Info Configuration initialized.
+2020-07-06 16:01:48.2011 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.2.11786. Product version: 4.7.2+024896f64b840a743d3fd89e29c2186681e7795f. GlobalAssemblyCache: False
+2020-07-06 16:03:02.4578 Info Message Template Auto Format enabled
+2020-07-06 16:03:02.4929 Info Loading assembly: NLog.Web.AspNetCore
+2020-07-06 16:03:02.6636 Info Adding target FileTarget(Name=alldata)
+2020-07-06 16:03:02.6840 Info Adding target FileTarget(Name=otherFile-web)
+2020-07-06 16:03:02.7841 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=C:\Users\parla.yerli\source\repos\Deneme\WebUI\bin\Debug\netcoreapp3.1\NLog.config
+2020-07-06 16:03:02.8473 Info Configuration initialized.
+2020-07-06 16:03:02.8632 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.2.11786. Product version: 4.7.2+024896f64b840a743d3fd89e29c2186681e7795f. GlobalAssemblyCache: False
+2020-07-06 16:06:15.4398 Info Message Template Auto Format enabled
+2020-07-06 16:06:15.4790 Info Loading assembly: NLog.Web.AspNetCore
+2020-07-06 16:06:15.6237 Info Adding target FileTarget(Name=alldata)
+2020-07-06 16:06:15.6391 Info Adding target FileTarget(Name=otherFile-web)
+2020-07-06 16:06:15.7327 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=C:\Users\parla.yerli\source\repos\Deneme\WebUI\bin\Debug\netcoreapp3.1\NLog.config
+2020-07-06 16:06:15.7927 Info Configuration initialized.
+2020-07-06 16:06:15.8076 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.2.11786. Product version: 4.7.2+024896f64b840a743d3fd89e29c2186681e7795f. GlobalAssemblyCache: False
+2020-07-06 16:07:17.5862 Info Message Template Auto Format enabled
+2020-07-06 16:07:17.6170 Info Loading assembly: NLog.Web.AspNetCore
+2020-07-06 16:07:17.7382 Info Adding target FileTarget(Name=alldata)
+2020-07-06 16:07:17.7541 Info Adding target FileTarget(Name=otherFile-web)
+2020-07-06 16:07:17.8242 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=C:\Users\parla.yerli\source\repos\Deneme\WebUI\bin\Debug\netcoreapp3.1\NLog.config
+2020-07-06 16:07:17.8770 Info Configuration initialized.
+2020-07-06 16:07:17.8894 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.2.11786. Product version: 4.7.2+024896f64b840a743d3fd89e29c2186681e7795f. GlobalAssemblyCache: False

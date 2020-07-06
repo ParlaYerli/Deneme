@@ -4,56 +4,108 @@
     ViewData["Title"] = "ListCallCenterUser";
 }
 
-<h1>ListCallCenterUser</h1>
+<h1>List CallCenter User</h1>
 
 <p>
     <a asp-action="Create">Create New</a>
 </p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Password)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.FullName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.IsActive)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CreatedDate)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Id)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Password)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.FullName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IsActive)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CreatedDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Id)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+
+<div class="row">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Kullanıcı ID</th>
+                <th scope="col">Kullanıcı Adı</th>
+                <th scope="col">Oluşturulma Tarihi</th>
+                <th scope="col">Statüs</th>
+                <th scope="col">Aksiyon</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <th scope="row">@item.Id</th>
+                    <td>@item.FullName</td>
+                    <td>@item.CreatedDate</td>
+                    @{ var statusStr = item.IsActive ? "Aktif" : "Pasif"; }
+                    <td>@statusStr</td>
+                    @{ var buttonStr = item.IsActive ? "Pasif Yap" : "Aktif Yap"; }
+                    <td>
+                        <input type="button" class="btn btn-primary btn-sm" onclick="updateStatus(@item.Id)" value="@buttonStr" />
+                        <input type="button" class="btn btn-primary btn-sm" data-toggle="modal" tabindex="-1" data-target="#myModal" onclick="writeId(@item.Id)" value="Şifre Değiştir" />
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<div class="modal" id="myModal">
+    <div class="modal-dialog position-static">
+        <div class="modal-content">
+            <div class="modal-header"> <h4>Şifre Değiştir</h4></div>
+            <div class="modal-body">
+                <form class="form-horizontal" role="form">
+                    <div class="form-group ">
+                        <label class="control-label col-md-3 pt-1 pr-0" for="inputyenisifre">Yeni Şifre:</label>
+                        <label class="control-label col-md-3 pt-1 pl-5" for="inputsifre" id="newpass"></label>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" onclick="newPass()">Şifre Üret</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="changePass()">Kaydet</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Position it -->
+<div style="position: fixed; bottom: 60px; right: 0;">
+    <div class="toast" id="myToast" role="alert" aria-live="assertive" aria-atomic="true" data-delay="4000" style="min-width:400px">
+        <div class="toast-header" style="background-color:#51a351">
+            <p class="mr-auto" style="font-size:14px; color:white" id="myToastText"><p />
+            <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        @*<div class="toast-body">
+                <p style="font-size:16px">İşlem Başarıyla Gerçekleşti. </p>
+            </div>*@
+    </div>
+</div>
+
+<input type="hidden" value="" id="userid" />
+<script>
+    function updateStatus(userid) {
+        $.post("/CallCenter/ToggleStatus", { userId: userid })
+            .done(function (data) {
+                window.location.href = '/CallCenter/ListCallCenterUser';
+            });
+    }
+
+    function newPass() {
+        $.get("/CallCenter/GeneratePassword")
+            .done(function (data) {
+                $("#newpass").html(data);
+            });
+    }
+
+    function changePass() {
+        if ($('#newpass').html() === '') {
+            alert('Lütfen Şifre Oluşturun.');
+            return;
+        }
+
+        var pass = $('#newpass').html();
+        var userid = $('#userid').val();
+
+        $.post("/CallCenter/ChangeCallCenterPassword", { userId: userid, pass: pass })
+            .done(function (data) {
+                $('#myToastText').html('Şifre Başarıyla Değiştirildi.');
+                $('#myToast').toast('show');
+            });
+    }
+    function writeId(userid) {
+        $('#userid').val(userid);
+    }
+</script>

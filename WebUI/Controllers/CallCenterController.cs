@@ -146,9 +146,9 @@ namespace WebUI.Controllers
             return Ok();
         }
 
-        public IActionResult ChangeCallCenterPassword(int dealerId,string pass)
+        public IActionResult ChangeCallCenterPassword(int userId,string pass)
         {
-            var user = _authService.GetUserByDealerId(dealerId);
+            var user = _authService.GetUserById(userId);
             user.Password = _authService.PasswordHasher(pass);
             _authService.UpdateUser(user);
             return Ok();
