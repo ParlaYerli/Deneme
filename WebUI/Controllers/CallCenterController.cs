@@ -145,6 +145,19 @@ namespace WebUI.Controllers
             _loggingService.Log(dealerId.ToString() + $" ID li bayinin telefon numarası {oldPhone} -> {phone} güncellenmiştir.", Entities.Abstract.LogType.ChangePhone, id);
             return Ok();
         }
+
+        public IActionResult ChangeCallCenterPassword(int dealerId,string pass)
+        {
+            var user = _authService.GetUserByDealerId(dealerId);
+            user.Password = _authService.PasswordHasher(pass);
+            _authService.UpdateUser(user);
+            return Ok();
+        }
+
+        public IActionResult GeneratePassword()
+        {
+            return Json(_authService.RandomPassword(6));
+        }
     }
 }
     
