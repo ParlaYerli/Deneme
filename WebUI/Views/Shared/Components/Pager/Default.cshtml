@@ -1,0 +1,57 @@
+﻿@model Business.Concrete.PagedResult<Entities.Concrete.User>
+@{
+    var urlTemplate = Url.Action() + "?page={0}";
+    var request = ViewContext.HttpContext.Request;
+    foreach (var key in request.Query.Keys)
+    {
+        if (key == "page")
+        {
+            continue;
+        }
+
+        urlTemplate += "&" + key + "=" + request.Query[key];
+    }
+
+    var startIndex = Math.Max(Model.CurrentPage - 5, 1);
+    var finishIndex = Math.Min(Model.CurrentPage + 5, Model.PageCount);
+}
+
+<div class="row ">
+    <div class="col">
+        @Model.RowCount kayıt içinden @Model.FirstRowOnPage ile @Model.LastRowOnPage arasındaki kayıtlar gösteriliyor.
+    </div>
+
+
+
+    <div class="col">
+        <nav aria-label="Page navigation example">
+
+            @if (Model.PageCount > 1)
+            {
+                <ul class="pagination">
+                    <li class="page-item"><a class="page-link" href="@urlTemplate.Replace("{0}", "1")">&laquo;</a></li>
+                    @for (var i = startIndex; i <= finishIndex; i++)
+                    {
+                        @if (i == Model.CurrentPage)
+                        {
+
+                            <li class="page-item"><a class="page-link"><span>@i</span></a></li>
+                        }
+                        else
+                        {
+
+                            <li class="page-item"><a class="page-link" href="@urlTemplate.Replace("{0}", i.ToString())">@i</a></li>
+                        }
+                    }
+
+
+                    <li class="page-item"><a class="page-link" href="@urlTemplate.Replace("{0}", Model.PageCount.ToString())">&raquo;</a></li>
+
+                </ul>
+            }
+
+        </nav>
+    </div>
+
+</div>
+

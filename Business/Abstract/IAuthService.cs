@@ -1,4 +1,5 @@
-﻿using Entities.Concrete;
+﻿using Business.Concrete;
+using Entities.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -17,5 +18,6 @@ namespace Business.Abstract
         void UpdateUser(User user);
         string PasswordHasher(string password);
         string RandomPassword(int length);
+        PagedResult<User> GetUser(int? userId, int currentPage, int pageSize);
     }
 }

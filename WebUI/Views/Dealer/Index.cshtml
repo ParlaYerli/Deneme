@@ -1,0 +1,33 @@
+﻿@model Business.Concrete.PagedResult<Entities.Concrete.User>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="row">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+
+                <th scope="col" colspan="1">FullName </th>
+
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var item in Model.Results)
+            {
+                <tr>
+
+                    <td colspan="1">@item.FullName</td>
+
+                </tr>
+            }
+
+
+
+        </tbody>
+    </table>
+    <div style="padding: 28px;">   @(await Component.InvokeAsync("Pager", Model))</div>
+
+</div>
+
